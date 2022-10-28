@@ -1,0 +1,18 @@
+
+base_dir:  ./data/single_pixel
+graphs:
+  - bag: ramp_10hz
+    cutoff_period: 158
+    skip: 0
+    max_read: 1000000000
+    ground_truth: 0.1
+  - bag: ramp_100hz
+    cutoff_period: 124
+    skip: 0
+    max_read: 1000000000
+    ground_truth: 0.01
+  - bag: ramp_1000hz
+    cutoff_period: 17
+    skip: 0
+    max_read: 1000000000
+    ground_truth: 0.001

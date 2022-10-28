@@ -1,0 +1,16 @@
+# config file for paper plotting
+
+base_dir:  ./data/single_pixel
+graphs:
+  - bag: square_wave_100hz
+    cutoff_period: 190
+    skip: 0
+    max_read: 1000000000
+    skip_events_plot: 720
+    num_events_plot: 150
+  - bag: ramp_100hz
+    cutoff_period: 124
+    skip: 0
+    max_read: 1000000000
+    skip_events_plot: 738
+    num_events_plot: 110
