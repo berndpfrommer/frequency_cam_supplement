@@ -92,3 +92,26 @@ python3 ../frequency_cam/src/mv_vs_frequency_cam.py -b ./data/leds_16_4096 --fre
 python3 ../frequency_cam/src/mv_vs_frequency_cam.py -b ./data/guitar --freq_min 70 --freq_max 300 -l 73.4 110.0 146.8 185.0 220.0 293.7 --font_scale 10.0 --font_thickness 20 --scale 5.0 --text_height 50
 % then pick frame 577
 ```
+
+## Random notes
+
+### Quad rotor
+From manually analyzing the frames the time of one rotation is about
+8ms or 7500rpm. This corresponds to (two blades!) a flicker frequency
+of about  250Hz. Used was SilkyEVCam #1 (#0293) with metavision 2.2
+and the following bias settings
+```
+299  % bias_diff
+221  % bias_diff_off
+384  % bias_diff_on
+1399 % bias_fo
+1250 % bias_hpf
+1250 % bias_pr
+1500 % bias_refr
+```
+Note: could not reproduce those with MV 2.3
+
+
+### Frequency sweep
+Used bias settings of ``bias_fo=1250`` after also trying 1299, 1346,
+and 1399.
